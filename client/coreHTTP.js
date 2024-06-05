@@ -2,7 +2,9 @@ class coreHTTP {
     async request(method, route, param = '', body = null) {
         try{
             route = route.concat('/');
-            route = route.concat(param);
+            if(param){
+                route = route.concat(param);
+            }
         
             const options = {
                 method
@@ -30,13 +32,13 @@ class coreHTTP {
         return this.request("GET", route, param);
     }
     post(route, body) {
-        return this.request("POST", route, "", body);
+        return this.request("POST", route, '', body);
     }
-    put(route, param, body) {
-        return this.request("PUT", route, param, body);
+    put(route, body) {
+        return this.request("PUT", route, '', body);
     }
-    delete(route, param) {
-        return this.request("DELETE", route, param);
+    delete(route, body) {
+        return this.request("DELETE", route, null, body);
     }
     patch(route, param, body) {
         return this.request("PATCH", route, param, body);
