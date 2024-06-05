@@ -34,11 +34,6 @@ function ShowList() {
 }
 
 async function GetTasks() {
-    // newList = await http.get('/list');
-    // for(var i = 0; i < newList.length; i++) {
-    //     var item = newList[i];
-    //     theList.push(item);
-    // }
     tasks = await http.get('/list');
     theList = tasks.task;
     ShowList();
@@ -78,15 +73,6 @@ async function httpDelete(input) {
         await GetTasks();
         ShowList();
     }
-    // const index = theList.indexOf(input.value);
-    // if (index == -1) {
-    //     alert("Not found.");
-    // } 
-    // else {
-    //     theList.splice(index, 1);
-    //     WriteList();
-    //     ShowList();
-    // }
 }
 
 function showLoading() {

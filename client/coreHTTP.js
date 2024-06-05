@@ -24,7 +24,6 @@ class coreHTTP {
             return data;
         }
         catch(err) {
-            console.log("Fetch failed:", err);
             return {error: err};
         }
     }
