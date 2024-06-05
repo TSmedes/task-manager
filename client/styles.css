@@ -103,6 +103,7 @@ input[type="button"]:focus {
   color: darkslategray;
   border-color: gray;
   outline: 0;
+  background-color: #dadada;
 }
 button.primary-button,
 input[type="submit"].primary-button,
