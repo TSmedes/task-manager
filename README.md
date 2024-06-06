@@ -17,9 +17,9 @@ Task Manager is a full stack web application that manages tasks from a database.
 3. Install dependencies: `npm install express`, `npm install mongoose`
 
 ## Usage
-1. Start the server: node app.js
+1. Start the server: `node app.js`
 2. Open your browser and navigate to `http://localhost:5500`
 
 ## Contribution
-1 [Toby Smedes](https://github.com/TSmedes)
-2 [Vy La](https://github.com/lavy-spu)
+- [Toby Smedes](https://github.com/TSmedes)
+- [Vy La](https://github.com/lavy-spu)
