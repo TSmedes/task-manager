@@ -173,6 +173,38 @@ input[type="checkbox"],
 input[type="radio"] {
   display: inline;
 }
+
+/* Hide the original text */
+.task-checkbox {
+  display: none;
+}
+
+/* Add custom styles for tasks */
+.task-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+/* Icons for completed tasks */
+.task-item.completed::before {
+  content: "\f00c"; /* Font Awesome check icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 1rem;
+  color: green;
+}
+
+/* Icons for incomplete tasks */
+.task-item.incomplete::before {
+  content: "\f00d"; /* Font Awesome times icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 1rem;
+  color: red;
+}
+
+
 label > .label-body {
   display: inline-block;
   margin-left: .5rem;

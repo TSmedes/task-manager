@@ -15,24 +15,28 @@ checkButton.addEventListener("click", () => httpPut(input.value));
 
 function ShowList() {
     let output = "";
-  for (var itm of theList) {
-    let li = '<li';
-    result.innerHTML += output;
+    for (var itm of theList) {
+        let li = '<li class="task-item';
 
-    if(itm.completed){
-        li += ' class="checked">';
-        li += '<span class="ch">[X] - </span>';
+        if(itm.completed){
+            li += ' completed">';
+        } else {
+            li += ' incomplete">';
+        }
+
+        li += `${itm.name}</li>`;
+        output += li;
     }
-    else if(!itm.completed){
-        li += ' class="unchecked">';
-        li += '<span class="unch">[ ] - </span>';
-    }
-    li += `${itm.name}</li>`;
-    output += li;
-  }
-  result.innerHTML = output;
+    result.innerHTML = output;
+
+    // Add event listeners to toggle completion state
+    document.querySelectorAll('.task-item').forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('completed');
+            item.classList.toggle('incomplete');
+        });
+    });
 }
-
 async function GetTasks() {
     tasks = await http.get('/list');
     theList = tasks.task;
@@ -55,7 +59,6 @@ async function httpPost(input) {
     if(input) {
         await NewTask(input);
         await GetTasks();
-        ShowList();
     }
 }
 
@@ -63,7 +66,6 @@ async function httpPut(input) {
     if(input) {
         await UpdateTask(input);
         await GetTasks();
-        ShowList();
     }
 }
 
@@ -71,7 +73,6 @@ async function httpDelete(input) {
     if(input) {
         await DeleteTask(input);
         await GetTasks();
-        ShowList();
     }
 }
 
