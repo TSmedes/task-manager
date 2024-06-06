@@ -21,5 +21,5 @@ Task Manager is a full stack web application that manages tasks from a database.
 2. Open your browser and navigate to `http://localhost:5500`
 
 ## Contribution
-_[Toby Smedes](https://github.com/TSmedes)
-_[Vy La](https://github.com/lavy-spu)
+-[Toby Smedes](https://github.com/TSmedes)
+-[Vy La](https://github.com/lavy-spu)
