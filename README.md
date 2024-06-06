@@ -13,7 +13,7 @@ Task Manager is a full stack web application that manages tasks from a database.
 
 ## Installation
 1. Clone the repository: `git clone https://github.com/TSmedes/task-manager.git`
-2. Navigate to the project directory: `cd repository`
+2. Navigate to the project directory: `cd "your repository here"`
 3. Install dependencies: `npm install express`, `npm install mongoose`
 
 ## Usage
