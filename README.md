@@ -23,6 +23,7 @@ Task Manager is a full stack web application that manages tasks from a database.
 ## Contribution
 - [Toby Smedes](https://github.com/TSmedes)
 - [Vy La](https://github.com/lavy-spu)
+- [Anthony Scanlon](https://github.com/scanlona)
 
 ## Preview
  ![preview](resources/demo.png)
